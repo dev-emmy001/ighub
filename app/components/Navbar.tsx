@@ -26,7 +26,7 @@ export const Navbar = () => {
     return (
         <nav className="fixed top-0 left-0 w-full z-50 p-4 md:p-8 pointer-events-none">
             <div className="max-w-[1400px] mx-auto pointer-events-auto">
-                <div className="bg-brand-purple/90 backdrop-blur-xl border border-white/10 rounded-[2rem] px-6 md:px-10 py-4 flex items-center justify-between shadow-2xl">
+                <div className="bg-gray-900/70 backdrop-blur-xl border border-white/10 rounded-[2rem] px-6 md:px-10 py-4 flex items-center justify-between shadow-2xl">
 
                     {/* Logo */}
                     <div className="flex items-center gap-2">
@@ -45,7 +45,7 @@ export const Navbar = () => {
                             </a>
                         ))}
 
-                        {/* Dropdown "For You" */}
+
                         <div
                             className="relative"
                             onMouseEnter={() => setIsDropdownOpen(true)}
@@ -79,9 +79,8 @@ export const Navbar = () => {
                         </div>
                     </div>
 
-                    {/* CTA & Mobile Toggle */}
                     <div className="flex items-center gap-4">
-                        <button className="hidden md:block bg-brand-green text-brand-purple px-6 py-2.5 rounded-full font-bold text-sm hover:bg-brand-orange hover:text-white transition-all shadow-lg">
+                        <button className="hidden md:block bg-brand-green text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-brand-orange hover:text-white transition-all shadow-lg">
                             Contact Us
                         </button>
                         <button
@@ -94,7 +93,7 @@ export const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile Menu */}
+            {/* mobile menu */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -104,7 +103,7 @@ export const Navbar = () => {
                         className="fixed inset-0 bg-brand-purple z-[60] flex flex-col p-10 lg:hidden"
                     >
                         <div className="flex justify-between items-center mb-16">
-                            <Typography variant="h5" className="text-white">IGHub<span className="text-brand-green">.</span></Typography>
+                            <img src="/images/igwhitelogo.png" className="w-30" alt="" />
                             <button onClick={() => setIsOpen(false)} className="text-white"><X className="w-8 h-8" /></button>
                         </div>
 

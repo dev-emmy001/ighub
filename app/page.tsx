@@ -1,5 +1,5 @@
 "use client";
-
+import { Users, Code, Lightbulb, Rocket } from "lucide-react";
 import { Typography } from "./components/ui/typography";
 import { Button } from "./components/ui/button";
 import { motion, Variants } from "framer-motion";
@@ -35,13 +35,10 @@ export default function Home() {
         animate="visible"
         className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 min-h-[80vh]"
       >
-
-        {/* LEFT CARD: CONTENT */}
         <motion.div
           variants={itemVariants}
-          className="bg-brand-purple rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-12 lg:p-16 flex flex-col justify-between relative overflow-hidden"
+          className="bg-brand-purple rounded-[2.5rem] md:rounded-[3rem] p-12 md:p-12 lg:p-16 flex flex-col justify-between relative overflow-hidden"
         >
-          {/* Top Tag */}
           <div className="flex items-center gap-2 text-brand-green mb-8 md:mb-12">
             <Zap className="w-4 h-4 fill-current" />
             <Typography variant="caption" className="font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs">
@@ -49,11 +46,10 @@ export default function Home() {
             </Typography>
           </div>
 
-          {/* Main Copy */}
           <div className="max-w-2xl">
             <Typography
               variant="h1"
-              className="text-white leading-[1.1] mb-6 md:mb-8 text-3xl md:text-5xl lg:text-6xl"
+              className="text-white leading-[1.1] mb-6 md:mb-8 text-3xl md:text-5xl lg:text-6xl font-normal"
               weight="bold"
             >
               Empowering Businesses, <br className="hidden md:block" />
@@ -133,6 +129,65 @@ export default function Home() {
         </motion.div>
 
       </motion.section>
+      {/* section 2 */}
+      <section className="py-24 px-6 max-w-[1440px] mx-auto">
+        <div className="mb-16 text-center">
+          <Typography variant="h2" className="text-brand-purple mb-4">Mobilizing the Next Generation of <br />Innovators and Digital Leaders</Typography>
+          {/* <Typography variant="body" className="text-slate-500">Tailored solutions for every stage of your tech journey.</Typography> */}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+          {/* Card 1: Venture Studio */}
+          <div className="md:col-span-8 bg-brand-green rounded-[2.5rem] p-10 relative overflow-hidden group">
+            <div className="relative z-10 h-full flex flex-col justify-between">
+              {/* <div className="bg-brand-green w-12 h-12 rounded-2xl flex items-center justify-center">
+                <Rocket className="text-brand-purple" />
+              </div> */}
+              <div className="my-auto">
+                <Typography variant="h3" className="text-white mb-4">Developers and Netpreneurs Fellowship</Typography>
+                <Typography variant="body" className="text-white/60">
+                  Our flagship 6-month digital skills program for out-of-school youths looking to build careers in tech. Participants undergo three months of intensive learning, followed by a three-month industry internship to gain hands-on experience.
+                </Typography>
+              </div>
+            </div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 group-hover:scale-125 transition-transform" />
+          </div>
+
+          {/* Card 2: Innovation Lab */}
+          <div className="md:col-span-4 bg-slate-100 rounded-[2.5rem] p-10 flex flex-col justify-between hover:bg-brand-orange/10 transition-colors">
+            {/* <div className="bg-brand-orange/20 w-12 h-12 rounded-2xl flex items-center justify-center">
+              <Lightbulb className="text-brand-orange" />
+            </div> */}
+            <div>
+              <Typography variant="h4" className="text-brand-purple mb-2">Kids Code Camp</Typography>
+              <Typography variant="body" className="text-slate-500">A dynamic program designed to introduce kids (ages 4–16) to technology and coding. Through fun and interactive learning, children gain early exposure to STEM, problem-solving, and creativity in a supportive environment.</Typography>
+            </div>
+          </div>
+
+          {/* Card 3: Talent Factory */}
+          <div className="md:col-span-4 bg-brand-green/10 rounded-[2.5rem] p-10 flex flex-col justify-between border border-brand-green/20">
+            {/* <div className="bg-brand-green/30 w-12 h-12 rounded-2xl flex items-center justify-center">
+              <Code className="text-brand-green" />
+            </div> */}
+            <div>
+              <Typography variant="h4" className="text-brand-purple mb-2">IGHub BizBoost</Typography>
+              <Typography variant="body" className="text-slate-500">A startup incubation program designed to help early-stage entrepreneurs build, launch, and scale their businesses. Through mentorship, resources, and funding support, BizBoost accelerates startup growth.</Typography>
+            </div>
+          </div>
+
+          {/* Card 4: Community */}
+          <div className="md:col-span-8 bg-slate-900 rounded-[2.5rem] p-10 relative overflow-hidden group">
+            <div className="relative z-10 flex flex-col justify-between h-full">
+              {/* <Users className="text-brand-green w-12 h-12" /> */}
+              <Typography variant="h3" className="text-white">Tech Tribe</Typography>
+            </div>
+            <div className="absolute bottom-0 right-0 p-8 opacity-20">
+              <Typography variant="h1" className="text-white text-8xl">COMMUNITY</Typography>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
   );
 }
