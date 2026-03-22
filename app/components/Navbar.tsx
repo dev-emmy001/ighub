@@ -3,7 +3,9 @@
 import { useState } from "react";
 import { Typography } from "./ui/typography";
 import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "./ui/button";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -28,12 +30,12 @@ export const Navbar = () => {
             <div className="max-w-[1400px] mx-auto pointer-events-auto">
                 <div className="bg-gray-900/70 backdrop-blur-xl border border-white/10 rounded-[2rem] px-6 md:px-10 py-4 flex items-center justify-between shadow-2xl">
 
-                    {/* Logo */}
+                    {/* logo */}
                     <div className="flex items-center gap-2">
-                        <img src="/images/igwhitelogo.png" className="w-30" alt="" />
+                        <Image src="/images/igwhitelogo.png" width={80} height={50} alt="ighub's logo. White Version" />
                     </div>
 
-                    {/* Desktop Links */}
+                    {/* desktop nav links */}
                     <div className="hidden lg:flex items-center gap-8">
                         {navLinks.map((link) => (
                             <a
@@ -61,18 +63,20 @@ export const Navbar = () => {
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: 10 }}
-                                        className="absolute top-full left-0 mt-4 w-64 bg-brand-purple border border-white/10 rounded-3xl p-6 shadow-2xl"
+                                        className="absolute top-full left-0 mt-4 w-64"
                                     >
-                                        <Typography variant="caption" className="text-brand-green font-bold mb-4 block">PROGRAM COURSES</Typography>
-                                        <ul className="space-y-4">
-                                            {programCourses.map((course) => (
-                                                <li key={course}>
-                                                    <a href="#" className="text-white/70 hover:text-brand-orange text-sm transition-colors flex justify-between items-center group">
-                                                        {course} <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all" />
-                                                    </a>
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <div className="bg-gray-900 border border-white/10 rounded-3xl p-6 shadow-2xl">
+                                            <Typography variant="body" className="text-brand-green font-bold mb-4 block">Program Courses</Typography>
+                                            <ul className="space-y-4">
+                                                {programCourses.map((course) => (
+                                                    <li key={course}>
+                                                        <a href="#" className="text-white/70 hover:text-brand-orange text-sm transition-colors flex justify-between items-center group">
+                                                            {course} <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all" />
+                                                        </a>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </motion.div>
                                 )}
                             </AnimatePresence>
@@ -80,9 +84,9 @@ export const Navbar = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <button className="hidden md:block bg-brand-green text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-brand-orange hover:text-white transition-all shadow-lg">
+                        <Button variant="secondary">
                             Contact Us
-                        </button>
+                        </Button>
                         <button
                             className="lg:hidden text-white p-2"
                             onClick={() => setIsOpen(!isOpen)}
@@ -93,7 +97,7 @@ export const Navbar = () => {
                 </div>
             </div>
 
-            {/* mobile menu */}
+            {/* mobile menu - opens from the right */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -103,7 +107,7 @@ export const Navbar = () => {
                         className="fixed inset-0 bg-brand-purple z-[60] flex flex-col p-10 lg:hidden"
                     >
                         <div className="flex justify-between items-center mb-16">
-                            <img src="/images/igwhitelogo.png" className="w-30" alt="" />
+                            <Image src="/images/igwhitelogo.png" width={80} height={20} alt="" />
                             <button onClick={() => setIsOpen(false)} className="text-white"><X className="w-8 h-8" /></button>
                         </div>
 

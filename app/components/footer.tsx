@@ -37,7 +37,7 @@ export const Footer = () => {
                         </div>
 
                         {/* Newsletter Card */}
-                        <div className="w-full lg:w-md bg-white/5 backdrop-blur-md p-6 rounded-3xl border border-white/10">
+                        <div className="w-full lg:w-md bg-white/5 backdrop-blur-md p-4 rounded-3xl border border-white/10">
                             <Typography variant="body" className="text-white/60 mb-6 block">Get tech insights delivered to your inbox.</Typography>
                             <form className="relative flex items-center">
                                 <input
@@ -51,8 +51,7 @@ export const Footer = () => {
                             </form>
                         </div>
                     </div>
-
-                    {/* Middle Tier: The Links */}
+                    {/* footer links */}
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 mb-20 border-t border-white/10 pt-16">
                         <div className="col-span-2 lg:col-span-2">
                             <img src="/images/igwhitelogo.png" className="w-30 mb-4" alt="" />

@@ -32,7 +32,7 @@ export const Typography = ({
     h4: 'font-heading text-2xl md:text-3xl',
     h5: 'font-heading text-xl md:text-2xl',
     h6: 'font-heading text-lg md:text-xl',
-    body: 'font-body text-base md:text-lg leading-relaxed',
+    body: 'font-body text-base md:text-lg tracking-tight leading-relaxed',
     caption: 'font-body text-sm uppercase tracking-wider',
   };
 

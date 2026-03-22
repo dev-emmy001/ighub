@@ -1,5 +1,5 @@
 "use client";
-import { Users, Code, Lightbulb, Rocket } from "lucide-react";
+import Image from "next/image";
 import { Typography } from "./components/ui/typography";
 import { Button } from "./components/ui/button";
 import { motion, Variants } from "framer-motion";
@@ -23,7 +23,7 @@ export default function Home() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      // transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
     },
   };
 
@@ -101,18 +101,20 @@ export default function Home() {
           </div>
         </motion.div>
 
-        {/* RIGHT CARD: IMAGE */}
+        {/* hero image div */}
         <motion.div
           variants={itemVariants}
           className="relative group bg-slate-100 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] lg:aspect-auto min-h-[400px]"
         >
-          <img
+          <Image
             src="/images/heroimage.jpeg"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            alt="IGHub Hero"
+            width={100}
+            height={50}
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+            alt="ighub hero image"
           />
 
-          {/* Floating Info Overlay - Modernized Mobile Positioning */}
+          {/* floating information overlay */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -129,20 +131,19 @@ export default function Home() {
         </motion.div>
 
       </motion.section>
-      {/* section 2 */}
-      <section className="py-24 px-6 max-w-[1440px] mx-auto">
+
+      {/* second section of homepage */}
+
+      <section className="py-24 md:px-6 px-0 max-w-[1440px] mx-auto">
         <div className="mb-16 text-center">
-          <Typography variant="h2" className="text-brand-purple mb-4">Mobilizing the Next Generation of <br />Innovators and Digital Leaders</Typography>
-          {/* <Typography variant="body" className="text-slate-500">Tailored solutions for every stage of your tech journey.</Typography> */}
+          <Typography variant="h2" weight="medium" className="text-gray-900 mb-4">Mobilizing the Next Generation of <br />Innovators and Digital Leaders</Typography>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
-          {/* Card 1: Venture Studio */}
+
+
           <div className="md:col-span-8 bg-brand-green rounded-[2.5rem] p-10 relative overflow-hidden group">
             <div className="relative z-10 h-full flex flex-col justify-between">
-              {/* <div className="bg-brand-green w-12 h-12 rounded-2xl flex items-center justify-center">
-                <Rocket className="text-brand-purple" />
-              </div> */}
               <div className="my-auto">
                 <Typography variant="h3" className="text-white mb-4">Developers and Netpreneurs Fellowship</Typography>
                 <Typography variant="body" className="text-white/60">
@@ -153,32 +154,25 @@ export default function Home() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 group-hover:scale-125 transition-transform" />
           </div>
 
-          {/* Card 2: Innovation Lab */}
+
           <div className="md:col-span-4 bg-slate-100 rounded-[2.5rem] p-10 flex flex-col justify-between hover:bg-brand-orange/10 transition-colors">
-            {/* <div className="bg-brand-orange/20 w-12 h-12 rounded-2xl flex items-center justify-center">
-              <Lightbulb className="text-brand-orange" />
-            </div> */}
             <div>
               <Typography variant="h4" className="text-brand-purple mb-2">Kids Code Camp</Typography>
               <Typography variant="body" className="text-slate-500">A dynamic program designed to introduce kids (ages 4–16) to technology and coding. Through fun and interactive learning, children gain early exposure to STEM, problem-solving, and creativity in a supportive environment.</Typography>
             </div>
           </div>
 
-          {/* Card 3: Talent Factory */}
+
           <div className="md:col-span-4 bg-brand-green/10 rounded-[2.5rem] p-10 flex flex-col justify-between border border-brand-green/20">
-            {/* <div className="bg-brand-green/30 w-12 h-12 rounded-2xl flex items-center justify-center">
-              <Code className="text-brand-green" />
-            </div> */}
             <div>
               <Typography variant="h4" className="text-brand-purple mb-2">IGHub BizBoost</Typography>
               <Typography variant="body" className="text-slate-500">A startup incubation program designed to help early-stage entrepreneurs build, launch, and scale their businesses. Through mentorship, resources, and funding support, BizBoost accelerates startup growth.</Typography>
             </div>
           </div>
 
-          {/* Card 4: Community */}
+
           <div className="md:col-span-8 bg-slate-900 rounded-[2.5rem] p-10 relative overflow-hidden group">
             <div className="relative z-10 flex flex-col justify-between h-full">
-              {/* <Users className="text-brand-green w-12 h-12" /> */}
               <Typography variant="h3" className="text-white">Tech Tribe</Typography>
             </div>
             <div className="absolute bottom-0 right-0 p-8 opacity-20">
@@ -186,6 +180,20 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* third section of home page */}
+      <section className="py-24 md:px-6 px-0 max-w-[1440px] mx-auto">
+        <div className="mb-16 justify-center text-center">
+          <div className="flex items-center gap-2 text-brand-green mb-8 md:mb-12">
+            <Zap className="w-4 h-4 fill-current" />
+            <Typography variant="caption" className="font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs">
+              did you know that
+            </Typography>
+          </div>
+          <Typography variant="h2" weight="medium" className="text-gray-900 mb-4">We Empower Entrepreneurs to Innovate, <br /> Build and Drive Impact</Typography>
+        </div>
+
       </section>
     </main>
 

@@ -32,19 +32,10 @@ export const Button = ({
     const baseStyles = "relative inline-flex items-center justify-center font-body font-bold transition-all duration-300 overflow-hidden rounded-full active:scale-95 disabled:opacity-50 disabled:pointer-events-none";
 
     const variants = {
-        // Deep Purple (Main Brand)
         primary: "bg-brand-purple text-white hover:bg-brand-purple/90 shadow-[0_10px_20px_-10px_rgba(39,40,110,0.5)]",
-
-        // Electric Green (High Energy)
-        secondary: "bg-brand-green text-brand-purple hover:bg-brand-green/90 shadow-[0_10px_20px_-10px_rgba(137,190,43,0.4)]",
-
-        // Vibrant Orange (Call to Action)
+        secondary: "bg-brand-green text-white hover:bg-brand-orange/90 shadow-[0_10px_20px_-10px_rgba(137,190,43,0.4)]",
         accent: "bg-brand-orange text-white hover:bg-brand-orange/90 shadow-[0_10px_20px_-10px_rgba(249,115,22,0.4)]",
-
-        // Transparent with border
         outline: "border-2 border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white bg-transparent",
-
-        // Minimalist
         ghost: "text-brand-purple hover:bg-brand-purple/5 bg-transparent",
     };
 
@@ -52,14 +43,14 @@ export const Button = ({
         sm: "px-5 py-2 text-xs",
         md: "px-8 py-3.5 text-sm",
         lg: "px-10 py-4 text-base",
-        xl: "px-12 py-5 text-lg", // For those big Hero CTAs
+        xl: "px-12 py-5 text-lg",
     };
 
     return (
         <motion.button
             type={type}
-            whileHover={{ y: -4, scale: 1.02 }} // Lifts up slightly on hover
-            whileTap={{ scale: 0.96 }}        // Tactile "press" effect
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.96 }}
             onClick={onClick}
             className={cn(baseStyles, variants[variant], sizes[size], className)}
         >
