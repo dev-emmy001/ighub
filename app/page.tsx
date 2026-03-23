@@ -4,7 +4,8 @@ import { Typography } from "./components/ui/typography";
 import { Button } from "./components/ui/button";
 import { motion, Variants } from "framer-motion";
 import { ArrowUpRight, Zap } from "lucide-react";
-
+import Ighubprogramgrid from "./components/ighubprogramgrid";
+import { Minititle } from "./components/minititle";
 export default function Home() {
   // Animation Variants for Staggered Entrance
   const containerVariants: Variants = {
@@ -60,12 +61,10 @@ export default function Home() {
             <Typography variant="body" className="text-white/60 mb-8 md:mb-10 text-base md:text-lg lg:text-xl leading-relaxed max-w-lg">
               We drive business growth with smart tech solutions, equip individuals with digital skills, and support startups in building the future.
             </Typography>
-
-            {/* Action Buttons - Stacked on tiny mobile, row on larger */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12 md:mb-16">
               <Button
                 variant="secondary"
-                className="w-full sm:w-auto rounded-full text-brand-purple px-8 py-6"
+                className="sm:w-auto rounded text-white px-8 py-6"
               >
                 Meet team
               </Button>
@@ -92,7 +91,7 @@ export default function Home() {
               <div className="flex -space-x-2 mb-2">
                 {[1, 2, 3].map(i => (
                   <div key={i} className="w-5 h-5 md:w-7 md:h-7 rounded-full bg-slate-700 border-2 border-brand-purple overflow-hidden">
-                    <div className="w-full h-full bg-gradient-to-tr from-brand-purple to-brand-green opacity-50" />
+                    <div className="w-full h-full bg-linear-to-tr from-brand-purple to-brand-green opacity-50" />
                   </div>
                 ))}
               </div>
@@ -104,7 +103,7 @@ export default function Home() {
         {/* hero image div */}
         <motion.div
           variants={itemVariants}
-          className="relative group bg-slate-100 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden aspect-[4/5] lg:aspect-auto min-h-[400px]"
+          className="relative group bg-slate-100 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden aspect-4/5 lg:aspect-auto min-h-[400px]"
         >
           <Image
             src="/images/heroimage.jpeg"
@@ -119,9 +118,9 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1, duration: 0.5 }}
-            className="absolute bottom-4 right-4 left-4 md:bottom-8 md:right-8 md:left-auto md:w-72 bg-brand-purple/40 backdrop-blur-xl border border-white/20 p-4 md:p-5 rounded-[2rem] flex gap-4 items-center shadow-2xl"
+            className="absolute bottom-4 right-4 left-4 md:bottom-8 md:right-8 md:left-auto md:w-72 bg-brand-purple/40 backdrop-blur-xl border border-white/20 p-4 md:p-5 rounded-4xl flex gap-4 items-center shadow-2xl"
           >
-            <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-green rounded-2xl flex-shrink-0 flex items-center justify-center">
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-green rounded-2xl shrink-0 flex items-center justify-center">
               <ArrowUpRight className="text-brand-purple w-6 h-6 md:w-7 md:h-7" />
             </div>
             <Typography variant="caption" className="text-white font-medium leading-tight text-[11px] md:text-xs">
@@ -133,64 +132,12 @@ export default function Home() {
       </motion.section>
 
       {/* second section of homepage */}
-
-      <section className="py-24 md:px-6 px-0 max-w-[1440px] mx-auto">
-        <div className="mb-16 text-center">
-          <Typography variant="h2" weight="medium" className="text-gray-900 mb-4">Mobilizing the Next Generation of <br />Innovators and Digital Leaders</Typography>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
-
-
-          <div className="md:col-span-8 bg-brand-green rounded-[2.5rem] p-10 relative overflow-hidden group">
-            <div className="relative z-10 h-full flex flex-col justify-between">
-              <div className="my-auto">
-                <Typography variant="h3" className="text-white mb-4">Developers and Netpreneurs Fellowship</Typography>
-                <Typography variant="body" className="text-white/60">
-                  Our flagship 6-month digital skills program for out-of-school youths looking to build careers in tech. Participants undergo three months of intensive learning, followed by a three-month industry internship to gain hands-on experience.
-                </Typography>
-              </div>
-            </div>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 group-hover:scale-125 transition-transform" />
-          </div>
-
-
-          <div className="md:col-span-4 bg-slate-100 rounded-[2.5rem] p-10 flex flex-col justify-between hover:bg-brand-orange/10 transition-colors">
-            <div>
-              <Typography variant="h4" className="text-brand-purple mb-2">Kids Code Camp</Typography>
-              <Typography variant="body" className="text-slate-500">A dynamic program designed to introduce kids (ages 4–16) to technology and coding. Through fun and interactive learning, children gain early exposure to STEM, problem-solving, and creativity in a supportive environment.</Typography>
-            </div>
-          </div>
-
-
-          <div className="md:col-span-4 bg-brand-green/10 rounded-[2.5rem] p-10 flex flex-col justify-between border border-brand-green/20">
-            <div>
-              <Typography variant="h4" className="text-brand-purple mb-2">IGHub BizBoost</Typography>
-              <Typography variant="body" className="text-slate-500">A startup incubation program designed to help early-stage entrepreneurs build, launch, and scale their businesses. Through mentorship, resources, and funding support, BizBoost accelerates startup growth.</Typography>
-            </div>
-          </div>
-
-
-          <div className="md:col-span-8 bg-slate-900 rounded-[2.5rem] p-10 relative overflow-hidden group">
-            <div className="relative z-10 flex flex-col justify-between h-full">
-              <Typography variant="h3" className="text-white">Tech Tribe</Typography>
-            </div>
-            <div className="absolute bottom-0 right-0 p-8 opacity-20">
-              <Typography variant="h1" className="text-white text-8xl">COMMUNITY</Typography>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Ighubprogramgrid />
 
       {/* third section of home page */}
       <section className="py-24 md:px-6 px-0 max-w-[1440px] mx-auto">
-        <div className="mb-16 justify-center text-center">
-          <div className="flex items-center gap-2 text-brand-green mb-8 md:mb-12">
-            <Zap className="w-4 h-4 fill-current" />
-            <Typography variant="caption" className="font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs">
-              did you know that
-            </Typography>
-          </div>
+        <div className="mb-16 text-center">
+          <Minititle>did you know that</Minititle>
           <Typography variant="h2" weight="medium" className="text-gray-900 mb-4">We Empower Entrepreneurs to Innovate, <br /> Build and Drive Impact</Typography>
         </div>
 

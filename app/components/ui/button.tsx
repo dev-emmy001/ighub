@@ -29,7 +29,7 @@ export const Button = ({
 }: ButtonProps) => {
 
     // Base styles: All buttons are rounded-full for that modern tech look
-    const baseStyles = "relative inline-flex items-center justify-center font-body font-bold transition-all duration-300 overflow-hidden rounded-full active:scale-95 disabled:opacity-50 disabled:pointer-events-none";
+    const baseStyles = "relative inline-flex items-center justify-center font-body font-bold transition-all duration-300 overflow-hidden rounded-md active:scale-95 disabled:opacity-50 disabled:pointer-events-none";
 
     const variants = {
         primary: "bg-brand-purple text-white hover:bg-brand-purple/90 shadow-[0_10px_20px_-10px_rgba(39,40,110,0.5)]",
@@ -54,9 +54,7 @@ export const Button = ({
             onClick={onClick}
             className={cn(baseStyles, variants[variant], sizes[size], className)}
         >
-            {/* Subtle shine effect on hover */}
-            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full hover:animate-[shimmer_1.5s_infinite] transition-transform" />
-
+            <span className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-white/10 to-transparent -translate-x-full hover:animate-[shimmer_1.5s_infinite] transition-transform" />
             <span className="relative z-10">{children}</span>
         </motion.button>
     );

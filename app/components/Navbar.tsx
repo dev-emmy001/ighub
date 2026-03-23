@@ -28,7 +28,7 @@ export const Navbar = () => {
     return (
         <nav className="fixed top-0 left-0 w-full z-50 p-4 md:p-8 pointer-events-none">
             <div className="max-w-[1400px] mx-auto pointer-events-auto">
-                <div className="bg-gray-900/70 backdrop-blur-xl border border-white/10 rounded-[2rem] px-6 md:px-10 py-4 flex items-center justify-between shadow-2xl">
+                <div className="bg-gray-900/70 backdrop-blur-xl border border-white/10 rounded-4xl px-6 md:px-10 py-4 flex items-center justify-between shadow-2xl">
 
                     {/* logo */}
                     <div className="flex items-center gap-2">
@@ -104,7 +104,7 @@ export const Navbar = () => {
                         initial={{ opacity: 0, x: 100 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: 100 }}
-                        className="fixed inset-0 bg-brand-purple z-[60] flex flex-col p-10 lg:hidden"
+                        className="fixed inset-0 bg-brand-purple z-60 flex flex-col p-10 lg:hidden"
                     >
                         <div className="flex justify-between items-center mb-16">
                             <Image src="/images/igwhitelogo.png" width={80} height={20} alt="" />

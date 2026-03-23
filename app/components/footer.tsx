@@ -24,7 +24,7 @@ export const Footer = () => {
                     {/* Top Tier: The "Hook" */}
                     <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-20">
                         <div className="max-w-xl">
-                            <Typography variant="h1" className="font-normal text-white leading-[1] mb-6 tracking-tight">
+                            <Typography variant="h1" className="font-normal text-white leading-none mb-6 tracking-tight">
                                 Ready to ship <br />
                                 <span className="text-brand-green italic">your next</span> big idea?
                             </Typography>
