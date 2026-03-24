@@ -6,6 +6,7 @@ import { motion, Variants } from "framer-motion";
 import { ArrowUpRight, Zap } from "lucide-react";
 import Ighubprogramgrid from "./components/ighubprogramgrid";
 import { Minititle } from "./components/minititle";
+import { LogoSlider } from "./components/LogoSlider";
 export default function Home() {
   // Animation Variants for Staggered Entrance
   const containerVariants: Variants = {
@@ -132,6 +133,7 @@ export default function Home() {
       </motion.section>
 
       {/* second section of homepage */}
+      <LogoSlider />
       <Ighubprogramgrid />
 
       {/* third section of home page */}
