@@ -32,7 +32,7 @@ export const Navbar = () => {
 
                     {/* logo */}
                     <div className="flex items-center gap-2">
-                        <Image src="/images/igwhitelogo.png" width={80} height={50} alt="ighub's logo. White Version" />
+                        <Image src="/images/igwhitelogo.png" width={100} height={100} alt="ighub's logo. White Version" />
                     </div>
 
                     {/* desktop nav links */}
@@ -84,9 +84,9 @@ export const Navbar = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <Button variant="secondary">
+                        <a href="/contact"> <Button variant="secondary">
                             Contact Us
-                        </Button>
+                        </Button></a>
                         <button
                             className="lg:hidden text-white p-2"
                             onClick={() => setIsOpen(!isOpen)}

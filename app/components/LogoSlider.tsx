@@ -11,6 +11,7 @@ const partners = [
     { name: "Techstars", logo: "/partners-logos/Techstars-Logo.png" },
     { name: "World Bank", logo: "/partners-logos/Worldbank-Logo.png" },
     { name: "MOE ", logo: "/partners-logos/MOE-Logo.png" },
+    { name: "GOV of Abia ", logo: "/partners-logos/GOV-Logo.png" },
 ];
 
 export const LogoSlider = () => {
