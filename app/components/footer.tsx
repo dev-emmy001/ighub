@@ -74,7 +74,7 @@ export const Footer = () => {
                         <div className="col-span-2 md:col-span-1">
                             <Typography variant="caption" className="text-brand-green font-bold tracking-widest mb-4 block">CONTACT</Typography>
                             <a href="mailto:info@ighub.com.ng" className="text-white hover:text-brand-orange transition-colors block mb-2">info@ighub.com.ng</a>
-                            <p className="text-white hover:text-brand-orange transition-colors block mb-2">07082367382</p>
+                            <a href="tel:+2347082367382" className="text-white hover:text-brand-orange transition-colors block mb-2">+2347082367382</a>
                             <Typography variant="body" className="text-white/50 text-sm italic">10 Calabar Street, Aba, Abia State, Nigeria</Typography>
                         </div>
                     </div>

@@ -91,11 +91,11 @@ export default function Home() {
               <div className="flex -space-x-2 mb-2">
                 {[1, 2, 3].map(i => (
                   <div key={i} className="w-5 h-5 md:w-7 md:h-7 rounded-full bg-slate-700 border-2 border-brand-purple overflow-hidden">
-                    <div className="w-full h-full bg-linear-to-tr from-brand-purple to-brand-green opacity-50" />
+                    <div className="w-full h-full bg-linear-to-tr from-brand-purple to-brand-orange opacity-50" />
                   </div>
                 ))}
               </div>
-              <Typography variant="caption" className="text-white/40 text-[9px] md:text-xs">10k+ Community</Typography>
+              <Typography variant="caption" className="text-white/40 text-[9px] md:text-xs">8k+ Community</Typography>
             </div>
           </div>
         </motion.div>
@@ -107,8 +107,8 @@ export default function Home() {
         >
           <Image
             src="/images/heroimage.jpeg"
-            width={100}
-            height={50}
+            fill
+            priority
             className="object-cover transition-transform duration-700 group-hover:scale-105"
             alt="ighub hero image"
           />
@@ -138,7 +138,7 @@ export default function Home() {
       <section className="py-24 md:px-6 px-0 max-w-[1440px] mx-auto">
         <div className="mb-16 text-center">
           <Minititle>did you know that</Minititle>
-          <Typography variant="h2" weight="medium" className="text-gray-900 mb-4">We Empower Entrepreneurs to Innovate, <br /> Build and Drive Impact</Typography>
+          <Typography variant="h2" weight="medium" className="text-gray-900 mb-4">We Empower Entrepreneurs to Innovate, <br /> Build and Drive Impact!</Typography>
         </div>
 
       </section>

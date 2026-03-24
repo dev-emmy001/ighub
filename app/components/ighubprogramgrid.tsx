@@ -1,9 +1,11 @@
 import { Typography } from "./ui/typography";
+import { Minititle } from "./minititle";
 export default function Ighubprogramgrid() {
     return (
         <div>
 
             <section className="py-24 md:px-6 px-0 max-w-[1440px] mx-auto">
+                <Minititle>We are also:</Minititle>
                 <div className="mb-16 text-center">
                     <Typography variant="h2" weight="medium" className="text-gray-900 mb-4">Mobilizing the Next Generation of <br />Innovators and Digital Leaders</Typography>
                 </div>

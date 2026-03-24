@@ -3,6 +3,7 @@ import { Typography } from "./ui/typography";
 import { Zap } from "lucide-react";
 interface MinititleProps {
     children: ReactNode;
+    className?: string;
 }
 export const Minititle = ({
     children,
