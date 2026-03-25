@@ -1,5 +1,5 @@
 import { Typography } from "./ui/typography";
-import { Twitter, Instagram, Facebook, ArrowUpRight, Send } from "lucide-react";
+import { Twitter, Instagram, Facebook, ArrowUpRight, Send, Youtube, Linkedin, } from "lucide-react";
 
 export const Footer = () => {
     const sections = [
@@ -75,7 +75,7 @@ export const Footer = () => {
                             <Typography variant="caption" className="text-brand-green font-bold tracking-widest mb-4 block">CONTACT</Typography>
                             <a href="mailto:info@ighub.com.ng" className="text-white hover:text-brand-orange transition-colors block mb-2">info@ighub.com.ng</a>
                             <a href="tel:+2347082367382" className="text-white hover:text-brand-orange transition-colors block mb-2">+2347082367382</a>
-                            <Typography variant="body" className="text-white/50 text-sm italic">10 Calabar Street, Aba, Abia State, Nigeria</Typography>
+                            <Typography variant="body" className="text-white/50 text-sm italic">10 Calabar Street, Aba, Abia State, Nigeria <br />39 New Market Road (Unic Building), Onitsha, Anambra State, Nigeria.</Typography>
                         </div>
                     </div>
 
@@ -86,7 +86,7 @@ export const Footer = () => {
                         </Typography>
 
                         <div className="flex gap-4">
-                            {[Facebook, Instagram, Twitter].map((Icon, i) => (
+                            {[Facebook, Instagram, Twitter, Youtube, Linkedin,].map((Icon, i) => (
                                 <a key={i} href="#" className="p-3 bg-white/5 text-white rounded-full hover:bg-brand-orange hover:text-white transition-all duration-300 shadow-xl">
                                     <Icon className="w-5 h-5" />
                                 </a>

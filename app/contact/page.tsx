@@ -5,6 +5,7 @@ import { Button } from "../components/ui/button";
 import { motion } from "framer-motion";
 import { Zap, Plus, Minus, Phone } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ContactPage() {
     const [activeFaq, setActiveFaq] = useState<number | null>(0);
@@ -15,14 +16,14 @@ export default function ContactPage() {
             a: "We offer comprehensive bootcamps in Frontend Development, UI/UX Design, and Data Analysis specifically tailored for those starting their tech journey.",
         },
         {
-            q: "How can my startup join the Venture Studio?",
+            q: "How can my startup join the startup incubation?",
             a: "We review applications on a rolling basis. We look for engineering-first founders building digital infrastructure for the African market.",
         },
     ];
 
     return (
-        <main className="min-h-screen bg-white p-3 md:p-6 lg:p-8 pt-28 md:pt-40">
-            <div className="max-w-[1400px] mx-auto">
+        <main className="min-h-screen bg-white p-3 md:p-6 lg:p-8 pt-24 md:pt-32">
+            <div className="max-w-[1400px] md:mt-30 mx-auto">
 
                 {/* SECTION 1: RESPONSIVE CONTACT CARD */}
                 <section className="bg-brand-purple rounded-[2.5rem] md:rounded-[3rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl mb-12 lg:mb-24">
@@ -41,8 +42,9 @@ export default function ContactPage() {
                                     <Zap className="w-5 h-5 text-brand-green mt-1 flex-shrink-0" />
                                     <div>
                                         <Typography variant="caption" className="text-brand-green font-bold block mb-1 tracking-widest">CONNECT NOW</Typography>
-                                        <Typography variant="body" className="text-white/80 text-sm md:text-base">hello@ighub.ng</Typography>
-                                        <Typography variant="body" className="text-white/80 text-sm md:text-base">+234 812 345 6789</Typography>
+                                        <a href="mailto:info@ighub.ng" className="text-white/80 text-sm md:text-base">info@ighub.ng</a>
+                                        <br />
+                                        <a href="" className="text-white/80 text-sm md:text-base">+234 812 345 6789</a>
                                     </div>
                                 </div>
 
@@ -51,8 +53,7 @@ export default function ContactPage() {
                                     <div>
                                         <Typography variant="caption" className="text-brand-green font-bold block mb-1 tracking-widest">VISIT US</Typography>
                                         <Typography variant="body" className="text-white/80 text-sm md:text-base">
-                                            IGHub Innovation Park, <br />
-                                            Aba-Owerri Road, Aba, Nigeria.
+                                            10 Calabar Street, Aba, Abia State.
                                         </Typography>
                                     </div>
                                 </div>
@@ -63,7 +64,7 @@ export default function ContactPage() {
                     {/* Right Side: The Form */}
                     <div className="w-full lg:w-1/2 p-4 md:p-8 lg:p-12 bg-white/5 backdrop-blur-sm">
                         <div className="bg-white rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-10 shadow-xl">
-                            <Typography variant="h4" className="text-brand-purple mb-8" weight="normal">Get a quote</Typography>
+                            <Typography variant="h4" className="text-brand-purple mb-8" weight="normal">Get A Quote</Typography>
 
                             <form className="space-y-5">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -99,7 +100,12 @@ export default function ContactPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                         {/* Left Image Card */}
                         <div className="lg:col-span-5 relative rounded-[2.5rem] overflow-hidden min-h-[350px] md:min-h-[500px]">
-                            <img src="/images/heroimage.jpeg" className="absolute inset-0 w-full h-full object-cover" alt="Support" />
+                            <Image fill
+                                priority
+                                src="/images/contact-page-img.jpg"
+                                sizes="auto"
+                                className="absolute inset-0 w-full h-full object-cover"
+                                alt="Support" />
                             <div className="absolute bottom-6 left-6 right-6 bg-brand-purple/60 backdrop-blur-md p-5 rounded-3xl border border-white/10 flex items-center gap-4">
                                 <div className="bg-brand-green p-3 rounded-2xl">
                                     <Phone className="text-brand-purple w-5 h-5" />
@@ -116,11 +122,11 @@ export default function ContactPage() {
                             {faqs.map((faq, index) => (
                                 <div
                                     key={index}
-                                    className="rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 border border-slate-100 bg-white"
+                                    className="rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 border border-slate-100 bg-gray-50"
                                     onClick={() => setActiveFaq(activeFaq === index ? null : index)}
                                 >
                                     <div className="flex justify-between items-center gap-4 cursor-pointer">
-                                        <Typography variant="h6" className="text-brand-purple font-bold text-sm md:text-base">{faq.q}</Typography>
+                                        <Typography variant="h4" className="text-brand-purple">{faq.q}</Typography>
                                         {activeFaq === index ? <Minus className="w-5 h-5 text-slate-400" /> : <Plus className="w-5 h-5 text-slate-400" />}
                                     </div>
                                     {activeFaq === index && (
