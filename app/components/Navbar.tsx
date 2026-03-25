@@ -84,7 +84,7 @@ export const Navbar = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <a href="/contact"> <Button variant="secondary">
+                        <a href="/contact"> <Button size="sm" variant="secondary">
                             Contact Us
                         </Button></a>
                         <button

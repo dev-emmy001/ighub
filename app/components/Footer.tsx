@@ -15,17 +15,17 @@ export const Footer = () => {
 
     return (
         <footer className="w-full bg-white py-10 px-4 md:px-10"> {/* Outer Page Background */}
-            <div className="max-w-[1400px] mx-auto bg-gray-950 rounded-[3rem] p-12 md:p-16 shadow-2xl relative overflow-hidden">
+            <div className="max-w-[1400px] mx-auto bg-gray-950 rounded-4xl md:rounded-[3rem] p-8 md:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
 
                 {/* Subtle Gradient Glow */}
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-green/10 blur-[120px] rounded-full -mr-64 -mt-64" />
 
                 <div className="relative z-10">
                     {/* Top Tier: The "Hook" */}
-                    <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-20">
+                    <div className="flex flex-col lg:flex-row justify-between items-start gap-8 md:gap-12 mb-12 lg:mb-20">
                         <div className="max-w-xl">
                             <Typography variant="h1" className="font-normal text-white leading-none mb-6 tracking-tight">
-                                Ready to ship <br />
+                                Ready to ship <br className="hidden sm:block" />
                                 <span className="text-brand-green italic">your next</span> big idea?
                             </Typography>
                             <button className="group flex items-center gap-3 text-white text-xl font-medium transition-all">
@@ -52,9 +52,9 @@ export const Footer = () => {
                         </div>
                     </div>
                     {/* footer links */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 mb-20 border-t border-white/10 pt-16">
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-12 mb-12 lg:mb-20 border-t border-white/10 pt-10 lg:pt-16">
                         <div className="col-span-2 lg:col-span-2">
-                            <img src="/images/igwhitelogo.png" className="w-30 mb-4" alt="" />
+                            <img src="/images/igwhitelogo.png" className="w-24 md:w-30 mb-4" alt="" />
                             {/* <Typography variant="body" className="text-white/50 text-sm max-w-xs">
                                 Empowering the next generation of African founders through technology, community, and capital.
                             </Typography> */}
@@ -80,12 +80,12 @@ export const Footer = () => {
                     </div>
 
                     {/* Bottom Tier */}
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-8 border-t border-white/5">
-                        <Typography variant="caption" className="text-white/30 tracking-widest uppercase text-[10px]">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 pt-8 border-t border-white/5">
+                        <Typography variant="caption" className="text-white/30 tracking-widest uppercase text-[10px] text-center md:text-left">
                             Copyright © 2026 Innovation Growth Hub | Powered by IGLabs
                         </Typography>
 
-                        <div className="flex gap-4">
+                        <div className="flex flex-wrap justify-center gap-4">
                             {[Facebook, Instagram, Twitter, Youtube, Linkedin,].map((Icon, i) => (
                                 <a key={i} href="#" className="p-3 bg-white/5 text-white rounded-full hover:bg-brand-orange hover:text-white transition-all duration-300 shadow-xl">
                                     <Icon className="w-5 h-5" />

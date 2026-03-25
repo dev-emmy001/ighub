@@ -40,7 +40,7 @@ export const Button = ({
     };
 
     const sizes = {
-        sm: "px-5 py-2 text-xs",
+        sm: "px-4 py-2 text-xs",
         md: "px-8 py-3.5 text-sm",
         lg: "px-10 py-4 text-base",
         xl: "px-12 py-5 text-lg",
@@ -54,7 +54,7 @@ export const Button = ({
             onClick={onClick}
             className={cn(baseStyles, variants[variant], sizes[size], className)}
         >
-            <span className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-white/10 to-transparent -translate-x-full hover:animate-[shimmer_1.5s_infinite] transition-transform" />
+            <span className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-white/10 to-transparent -translate-x-full md:hover:animate-[shimmer_1.5s_infinite] transition-transform" />
             <span className="relative z-10">{children}</span>
         </motion.button>
     );
