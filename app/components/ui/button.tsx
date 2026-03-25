@@ -29,7 +29,7 @@ export const Button = ({
 }: ButtonProps) => {
 
     // Base styles: All buttons are rounded-full for that modern tech look
-    const baseStyles = "relative inline-flex items-center justify-center font-body font-bold transition-all duration-300 overflow-hidden rounded-md active:scale-95 disabled:opacity-50 disabled:pointer-events-none";
+    const baseStyles = "relative inline-flex items-center justify-center font-body transition-all duration-300 overflow-hidden rounded-md active:scale-95 disabled:opacity-50 disabled:pointer-events-none";
 
     const variants = {
         primary: "bg-brand-purple text-white hover:bg-brand-purple/90 shadow-[0_10px_20px_-10px_rgba(39,40,110,0.5)]",
