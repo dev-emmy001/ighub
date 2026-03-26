@@ -31,7 +31,7 @@ export default function ContactPage() {
                     {/* Left Side: Information */}
                     <div className="w-full lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative">
                         <div className="relative z-10">
-                            <Typography variant="h2" className="text-white leading-[1.1] mb-8 text-3xl md:text-5xl" weight="normal">
+                            <Typography variant="h2" className="text-white leading-[1.1] mb-8" weight="normal">
                                 Kickstart mission <br className="hidden md:block" />
                                 by connecting <br className="hidden md:block" />
                                 with team
